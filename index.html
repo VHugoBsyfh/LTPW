@@ -21,8 +21,8 @@
             formCadastro.email_cad.focus();
             return false;
         }
-        if (senha_cadastro == "") {
-            alert('Preencha o campo com a sua senha!');
+        if (senha_cadastro == "" || senha_cadastro.lenght <6) {
+            alert('Preencha o campo com a sua senha! (mínimo de 6 e máximo de 8 caracteres)');
             formCadastro.senha_cad.focus();
             return false;
         }
@@ -36,21 +36,11 @@
             formLogin.email_login.focus();
             return false;
         }
-        if (senha_login == "") {
-            alert('Preencha o campo com a sua senha para logar!');
+        if (senha_login == "" || senha_login.lenght <6) {
+            alert('Preencha o campo com a sua senha para logar! (mínimo de 6 e máximo de 8 caracteres)');
             formLogin.senha_login.focus();
             return false;
         }
-    }
-    if (senha_cadastro == "" || senha_cadastro.lenght <6){
-        alert('Preencha o campo com a sua senha! (mínimo de 6 e máximo de 8 caracteres)');
-        formCadastro.senha_cad.focus();
-    return false;
-    }
-    if (senha_login == "" || senha_login.lenght <6){
-        alert('Preencha o campo com a sua senha para logar! (mínimo de 6 e máximo de 8 caracteres)');
-        formLogin.senha_login.focus();
-    return false;
     }
 </script>
 
